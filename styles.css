@@ -3,6 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+
+    font-family: "Gabarito", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+
+}
 .container {
     width: 100%;
     max-width: 1200px;
@@ -41,7 +50,7 @@
 .header-nav-list > li > a {
     color: #555555;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 28.8px;
 
@@ -52,11 +61,11 @@
     background-repeat: no-repeat;
     background-size: cover;
      background-position: center;
-     height: 810px;
+     height: 700px;
 }
 .hero .container{
     position: relative;
-    height: 810px;
+    height: 700px;
     width: 100%;
 }
 .hero .hero-content{
@@ -72,5 +81,17 @@
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
+}
+.hero .hero-text h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    padding-bottom: 16px;
+    color: #EF7D00;
+}
+.hero .hero-text p{
+    font-size: 16px;
+    color: #555555;
 }
         
