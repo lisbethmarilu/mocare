@@ -116,6 +116,7 @@ body{
 .beneficios .beneficios-text p{
     text-transform: uppercase;
     font-size: 18px;
+    font-weight: 600;
     color: #555555;
 }
 .beneficios .beneficios-content{
@@ -128,4 +129,41 @@ body{
     flex-direction: column;
     justify-content: space-between;
 }
+/*
+.beneficios .beneficios-btn:after{
+    content: "";
+    transform: translateX(-50%);
+    background-color: #cce3ff97;
+    border-radius: 50%;
+    bottom: -7px;
+    left: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+}
+    */
+    .beneficios-btn {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .beneficios-btn img {
+        display: block;
+        width: 40px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .beneficios-btn::after {
+        content: "";
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 65px;
+        height: 65px;
+        background-color: #CCE3FF;
+        border-radius: 50%;
+        z-index: 1;
+    }
         
