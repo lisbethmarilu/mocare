@@ -85,13 +85,47 @@ body{
 .hero .hero-text h1{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 42px;
+    line-height: 48px;
     padding-bottom: 16px;
     color: #EF7D00;
 }
 .hero .hero-text p{
     font-size: 16px;
     color: #555555;
+}
+/* Hero Styles */
+.beneficios{
+    padding-top: 40px;
+}
+.beneficios h2{
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #555555;
+    text-align: center;
+}
+.beneficios .beneficios-img{
+    background-image: url('./img/fondo-beneficios.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+.beneficios .beneficios-text p{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #555555;
+}
+.beneficios .beneficios-content{
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+}
+.beneficios .parte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
         
