@@ -94,9 +94,9 @@ body{
     font-size: 16px;
     color: #555555;
 }
-/* Hero Styles */
+/* beneficios Styles */
 .beneficios{
-    padding-top: 40px;
+    padding-top: 80px;
 }
 .beneficios h2{
     text-transform: uppercase;
@@ -112,6 +112,8 @@ body{
     background-size: cover;
     background-position: center;
     height: 600px;
+    display: flex;
+    align-items: center;
 }
 .beneficios .beneficios-text p{
     text-transform: uppercase;
@@ -166,4 +168,57 @@ body{
         border-radius: 50%;
         z-index: 1;
     }
-        
+    /* caracteristicas Styles */
+    .caracteristicas{
+        padding-top: 80px;
+    }
+    .caracteristicas h2{
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #555555;
+        text-align: center;
+        padding-bottom: 80px;
+    }
+    .caracteristicas .content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+        row-gap: 24px;
+        padding-bottom: 80px;
+    }
+    .caracteristicas .caracteristicas-parte{
+        display: flex;
+        padding: 16px;
+        align-items: center;
+    }
+    .caracteristicas .card{
+        background-color: #F5F5F5;
+        border-radius: 24px;
+        height: 500px;
+        overflow: hidden;
+    }
+    .caracteristicas h3{
+        font-size: 18px;
+        font-weight: 600;
+        color: #555555;
+    }
+    .caracteristicas p{
+        font-size: 16px;
+        color: #555555;
+    }
+    /* como-funciona Styles */
+    .como-funciona{
+        padding-top: 80px;
+        background-color: #F5F5F5;
+    }
+    .como-funciona h2{
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        color: #555555;
+        text-align: center;
+        padding-bottom: 80px;
+    }
