@@ -21,6 +21,14 @@ body{
 
 /* Header Styles */
 
+.header{
+    height: 60px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+    background: #fff;
+}
 .header-container {
     width: 100%;
     max-width: 1200px;
@@ -31,6 +39,12 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 60px;
+    align-items: center;
+}
+.header-logo img {
+    width: 200px;
+    height: auto; 
 }
 .header-nav {
     display: flex;
@@ -99,6 +113,11 @@ body{
     height: 200px;
     display: flex;
     align-items: center;
+    position: sticky;
+    width: 100%; 
+    top: 0;
+    left: 0;
+    background: #fff;
 }
 .access .access-wrapper{
     display: flex;
@@ -116,11 +135,18 @@ body{
     position: relative;
     color: #555555;
 }
-/* beneficios Styles */
-.beneficios{
-    padding-top: 40px;
+.access-btn.active {
+    background: #EF7D00;
+    color: #FFFFFF;
 }
-.beneficios h2{
+.access-btn:hover{
+    background: #cfcfcf;
+}
+/* beneficios Styles */
+#beneficios{
+    padding-top: 80px;
+}
+#beneficios h2{
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
@@ -128,7 +154,7 @@ body{
     color: #555555;
     text-align: center;
 }
-.beneficios .beneficios-img{
+#beneficios .beneficios-img{
     background-image: url('./img/fondo-beneficios.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,42 +163,30 @@ body{
     display: flex;
     align-items: center;
 }
-.beneficios .beneficios-text{
+#beneficios .beneficios-text{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
 }
-.beneficios .beneficios-text p{
+#beneficios .beneficios-text p{
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 600;
     color: #555555;
 }
-.beneficios .beneficios-content{
+#beneficios .beneficios-content{
     display: flex;
     justify-content: space-between;
     height: 300px;
 }
-.beneficios .parte{
+#beneficios .parte{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-/*
-.beneficios .beneficios-btn:after{
-    content: "";
-    transform: translateX(-50%);
-    background-color: #cce3ff97;
-    border-radius: 50%;
-    bottom: -7px;
-    left: 50%;
-    height: 50px;
-    position: absolute;
-    width: 50px;
-}
-    */
-    .beneficios-btn {
+
+ .beneficios-btn {
         position: relative;
         display: inline-block;
         cursor: pointer;
@@ -226,10 +240,10 @@ body{
         }
     }
     /* caracteristicas Styles */
-    .caracteristicas{
+    #caracteristicas{
         padding-top: 80px;
     }
-    .caracteristicas h2{
+    #caracteristicas h2{
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
@@ -238,39 +252,39 @@ body{
         text-align: center;
         padding-bottom: 80px;
     }
-    .caracteristicas .content{
+    #caracteristicas .content{
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 24px;
         row-gap: 24px;
         padding-bottom: 80px;
     }
-    .caracteristicas .caracteristicas-parte{
+    #caracteristicas .caracteristicas-parte{
         display: flex;
         padding: 16px;
         align-items: center;
     }
-    .caracteristicas .card{
+    #caracteristicas .card{
         background-color: #F5F5F5;
         border-radius: 24px;
         height: 500px;
         overflow: hidden;
     }
-    .caracteristicas h3{
+    #caracteristicas h3{
         font-size: 18px;
         font-weight: 600;
         color: #555555;
     }
-    .caracteristicas p{
+    #caracteristicas p{
         font-size: 16px;
         color: #555555;
     }
     /* como-funciona Styles */
-    .como-funciona{
+    #como-funciona{
         padding-top: 80px;
         background-color: #F5F5F5;
     }
-    .como-funciona h2{
+    #como-funciona h2{
         text-transform: uppercase;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;

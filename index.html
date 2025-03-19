@@ -16,21 +16,23 @@
 <body>
     <!-- Header Section -->
     <header>
-        <div class="header-container">
-            <div class="header-wrapper">
-                <div class="header-logo">
-                    <img src="./img/montcare_logo.svg">
+        <div class="header">
+            <div class="header-container">
+                <div class="header-wrapper">
+                    <div class="header-logo">
+                        <img src="./img/montcare_logo.svg">
+                    </div>
+    
+                    <nav class="header-nav">
+                        <ol class="header-nav-list">
+                            <li><a href="#">Inicio</a></li>
+                            <li><a href="#">Beneficio</a></li>
+                            <li><a href="#">Productos</a></li>
+                            <li><a href="#">Certificaciones</a></li>
+                            <li><a href="#">Colabora</a></li>
+                        </ol>
+                    </nav>
                 </div>
-
-                <nav class="header-nav">
-                    <ol class="header-nav-list">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Beneficio</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li><a href="#">Certificaciones</a></li>
-                        <li><a href="#">Colabora</a></li>
-                    </ol>
-                </nav>
             </div>
         </div>
     </header>
@@ -60,7 +62,7 @@
         </div>
     </section>
     <!-- beneficios Section -->
-    <section class="beneficios">
+    <section id="beneficios" class="section">
         <h2>Beneficios</h2>
         <div class="beneficios-img">
             <div class="container">
@@ -98,7 +100,7 @@
         </div>
     </section>
     <!-- caracteristicas Section -->
-     <section class="caracteristicas">
+     <section id="caracteristicas" class="section">
         <div class="container">
             <h2>Carácteristicas</h2>
             <div class="content">
@@ -163,7 +165,7 @@
         </div>
      </section>
      <!-- como funciona Section -->
-      <section class="como-funciona">
+      <section id="como-funciona" class="section">
         <div class="container">
             <h2>Como funciona</h2>
             <div class="content">
@@ -173,5 +175,38 @@
       </section>
 
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".section");
+    const buttons = document.querySelectorAll(".access-btn");
+
+    // Detectar cuando una sección está en pantalla
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                let activeSection = entry.target.getAttribute("id");
+
+                // Remover 'active' de todos los botones
+                buttons.forEach(btn => btn.classList.remove("active"));
+
+                // Agregar 'active' al botón correspondiente
+                document.querySelector(`.access-btn[data-page="${activeSection}"]`).classList.add("active");
+            }
+        });
+    }, { threshold: 0.5 }); // Detecta cuando el 50% de la sección es visible
+
+    // Observar cada sección
+    sections.forEach(section => observer.observe(section));
+
+    // Permitir que los botones hagan scroll a la sección
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+            const sectionId = button.getAttribute("data-page");
+            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+});
+
+</script>
 
 </html>
