@@ -22,7 +22,7 @@
                     <div class="header-logo">
                         <img src="./img/montcare_logo.svg">
                     </div>
-    
+
                     <nav class="header-nav">
                         <ol class="header-nav-list">
                             <li><a href="#">Inicio</a></li>
@@ -44,7 +44,7 @@
                     <div class="hero-text">
                         <h1>Tensiómetro Digital de brazo</h1>
                         <p>Aliquam eleifend finibus odio, id pharetra dui laoreet quis. Aliquam blandit, ex quis blandit
-                        . Nulla eget rhoncus nibh.
+                            . Nulla eget rhoncus nibh.
                         </p>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
         </div>
     </section>
     <!-- caracteristicas Section -->
-     <section id="caracteristicas" class="section">
+    <section id="caracteristicas" class="section">
         <div class="container">
             <h2>Carácteristicas</h2>
             <div class="content">
@@ -159,53 +159,74 @@
                     <div class="caracteristicas-img">
                         <img src="./img/img-memoria.png">
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-     </section>
-     <!-- como funciona Section -->
-      <section id="como-funciona" class="section">
+    </section>
+    <!-- como funciona Section -->
+    <section id="como-funciona" class="section">
         <div class="container">
             <h2>Como funciona</h2>
             <div class="content">
-                <div class="parte"></div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/O97cZyx4C1w?si=0NAw_0lFfpF4UVo4"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
             </div>
         </div>
-      </section>
+    </section>
+       <!-- comunicate Section -->
+    <section class="comunicate">
+        <div class="container">
+            <div class="content fondo-img">
+                <div class="comunicate-icon">
+                    <img src="./img/icon-comunicate.svg">
+                </div>
+                <div class="comunicate-text">
+                    <h2>¿ESTÁS INTERESADO?</h2>
+                    <p>Contáctanos para obtener más información de Montcare</p>
+                </div>
+                <button class="access-btn">Comunicate aquí</button>
+            </div>
+        </div>
+    </section>
 
 </body>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll(".section");
-    const buttons = document.querySelectorAll(".access-btn");
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll(".section");
+        const buttons = document.querySelectorAll(".access-btn");
 
-    // Detectar cuando una sección está en pantalla
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                let activeSection = entry.target.getAttribute("id");
+        // Detectar cuando una sección está en pantalla
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    let activeSection = entry.target.getAttribute("id");
 
-                // Remover 'active' de todos los botones
-                buttons.forEach(btn => btn.classList.remove("active"));
+                    // Remover 'active' de todos los botones
+                    buttons.forEach(btn => btn.classList.remove("active"));
 
-                // Agregar 'active' al botón correspondiente
-                document.querySelector(`.access-btn[data-page="${activeSection}"]`).classList.add("active");
-            }
-        });
-    }, { threshold: 0.5 }); // Detecta cuando el 50% de la sección es visible
+                    // Agregar 'active' al botón correspondiente
+                    document.querySelector(`.access-btn[data-page="${activeSection}"]`).classList.add("active");
+                }
+            });
+        }, { threshold: 0.5 }); // Detecta cuando el 50% de la sección es visible
 
-    // Observar cada sección
-    sections.forEach(section => observer.observe(section));
+        // Observar cada sección
+        sections.forEach(section => observer.observe(section));
 
-    // Permitir que los botones hagan scroll a la sección
-    buttons.forEach(button => {
-        button.addEventListener("click", () => {
-            const sectionId = button.getAttribute("data-page");
-            document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+        // Permitir que los botones hagan scroll a la sección
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                const sectionId = button.getAttribute("data-page");
+                document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+            });
         });
     });
-});
 
 </script>
 
