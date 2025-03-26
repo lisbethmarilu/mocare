@@ -68,7 +68,7 @@
             <div class="container">
                 <div class="beneficios-content">
                     <div class="parte">
-                        <div class="beneficios-text">
+                        <div class="beneficios-text" data-modal="recargable">
                             <div class="beneficios-btn">
                                 <img src="./img/icon-beneficios.svg">
                             </div>
@@ -99,6 +99,25 @@
             </div>
         </div>
     </section>
+    <!-- modal popup -->
+    <div class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 id="modal-title">Título del Beneficio</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modal-image" src="" alt="Imagen de beneficio">
+                </div>
+                <div class="modal-content">
+                    <p id="modal-description">Descripción del beneficio aquí...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
     <!-- caracteristicas Section -->
     <section id="caracteristicas" class="section">
         <div class="container">
@@ -194,6 +213,8 @@
             </div>
         </div>
     </section>
+ 
+
 
 </body>
 <script>
@@ -227,6 +248,70 @@
             });
         });
     });
+
+
+    const beneficiosData = {
+    recargable: {
+        title: "Recargable",
+        image: "./img/icon-recargable.svg",
+        description: "Batería de larga duración y recargable mediante conexión USB tipo C..."
+    },
+    compatible: {
+        title: "Compatible",
+        image: "./img/icon-compatible.svg",
+        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
+    },
+    // otros beneficios
+};
+
+function openModal(type) {
+    const data = beneficiosData[type];
+
+    if (!data) return;
+
+    modalTitle.textContent = data.title;
+    modalImage.src = data.image;
+    modalDescription.textContent = data.description;
+
+    // Agregar clase para iniciar animación
+    modalOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Evitar desplazamiento
+}
+function closeModal() {
+    modalOverlay.classList.add('closing');
+
+    // Esperar a que termine la animación antes de ocultar completamente
+    setTimeout(() => {
+        modalOverlay.classList.remove('active', 'closing');
+        document.body.style.overflow = ''; // Restaurar desplazamiento
+    }, 300);
+}
+// Agregar eventos de clic a elementos de beneficios
+const beneficiosItems = document.querySelectorAll('.beneficios-text');
+beneficiosItems.forEach(item => {
+    item.addEventListener('click', function() {
+        const modalType = this.getAttribute('data-modal');
+        openModal(modalType);
+    });
+});
+
+// Cerrar modal haciendo clic en el botón de cerrar
+modalClose.addEventListener('click', closeModal);
+
+// Cerrar modal haciendo clic fuera
+modalOverlay.addEventListener('click', function(e) {
+    if (e.target === modalOverlay) {
+        closeModal();
+    }
+});
+
+// Cerrar modal con tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+        closeModal();
+    }
+});
+
 
 </script>
 
