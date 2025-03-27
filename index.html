@@ -74,7 +74,7 @@
                             </div>
                             <p>Recargable</p>
                         </div>
-                        <div class="beneficios-text">
+                        <div class="beneficios-text" data-modal="compatible">
                             <div class="beneficios-btn">
                                 <img src="./img/icon-beneficios.svg">
                             </div>
@@ -82,13 +82,13 @@
                         </div>
                     </div>
                     <div class="parte">
-                        <div class="beneficios-text">
+                        <div class="beneficios-text" data-modal="ergonomico">
                             <div class="beneficios-btn">
                                 <img src="./img/icon-beneficios.svg">
                             </div>
                             <p>Ergonómico</p>
                         </div>
-                        <div class="beneficios-text">
+                        <div class="beneficios-text" data-modal="preciso">
                             <div class="beneficios-btn">
                                 <img src="./img/icon-beneficios.svg">
                             </div>
@@ -100,6 +100,7 @@
         </div>
     </section>
     <!-- modal popup -->
+     
     <div class="modal-overlay">
         <div class="modal-container">
             <div class="modal-header">
@@ -253,12 +254,22 @@
     const beneficiosData = {
     recargable: {
         title: "Recargable",
-        image: "./img/icon-recargable.svg",
+        image: "./img/icon-beneficios.svg",
         description: "Batería de larga duración y recargable mediante conexión USB tipo C..."
     },
     compatible: {
         title: "Compatible",
-        image: "./img/icon-compatible.svg",
+        image: "./img/icon-beneficios.svg",
+        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
+    },
+    ergonomico: {
+        title: "Ergonomico",
+        image: "./img/icon-beneficios.svg",
+        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
+    },
+    preciso: {
+        title: "Preciso",
+        image: "./img/icon-beneficios.svg",
         description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
     },
     // otros beneficios
@@ -286,6 +297,9 @@ function closeModal() {
         document.body.style.overflow = ''; // Restaurar desplazamiento
     }, 300);
 }
+
+
+
 // Agregar eventos de clic a elementos de beneficios
 const beneficiosItems = document.querySelectorAll('.beneficios-text');
 beneficiosItems.forEach(item => {
