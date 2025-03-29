@@ -100,7 +100,7 @@
         </div>
     </section>
     <!-- modal popup -->
-     
+
     <div class="modal-overlay">
         <div class="modal-container">
             <div class="modal-header">
@@ -108,17 +108,13 @@
                 <button class="modal-close">&times;</button>
             </div>
             <div class="modal-body">
-                <div class="modal-image">
-                    <img id="modal-image" src="" alt="Imagen de beneficio">
-                </div>
                 <div class="modal-content">
                     <p id="modal-description">Descripción del beneficio aquí...</p>
                 </div>
             </div>
         </div>
     </div>
-    
-    
+
     <!-- caracteristicas Section -->
     <section id="caracteristicas" class="section">
         <div class="container">
@@ -199,7 +195,7 @@
             </div>
         </div>
     </section>
-       <!-- comunicate Section -->
+    <!-- comunicate Section -->
     <section class="comunicate">
         <div class="container">
             <div class="content fondo-img">
@@ -214,7 +210,32 @@
             </div>
         </div>
     </section>
- 
+    <!-- footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="footer-nosotros">
+                    <img src="./img/montcare_logo.svg">
+                    <p>Línea de productos portátiles que mejora tu calidad de vida con tecnología innovadora y fácil de
+                        usar. Nuestros productos en acción: Explora innovación y precisión con nosotros.</p>
+                </div>
+                <div class="footer-contactanos">
+                    <h3>CONTÁCTANOS</h3>
+                    <p>Si tiene alguna pregunta, contáctenos en ventas@mao.com.pe<br>
+                        Av. Caminos Del Inca N° 264 Interior 03<br>
+                        Urb. San Juan Bautista De Villa - Chorrillos<br>
+                        Celular: (51) 254 5889 / 993560212</p>
+                </div>
+                <div class="footer-redes">
+                    <h3>CONÉCTESE</h3>
+                    <img src="./img/icon-facebook.svg">
+                    <img src="./img/icon-instagram.svg">
+                    <img src="./img/icon-tiktok.svg">
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
 </body>
@@ -248,84 +269,85 @@
                 document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
             });
         });
+
+        // Modal implementation for beneficios
+        const modalOverlay = document.querySelector('.modal-overlay');
+        const modalClose = document.querySelector('.modal-close');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+
+        // Modal data for each benefit
+        const beneficiosData = {
+            recargable: {
+                title: "Recargable",
+                description: "Batería de larga duración y recargable mediante conexión USB tipo C. No necesitas cambiar pilas constantemente, lo que resulta más económico y ecológico."
+            },
+            compatible: {
+                title: "Compatible",
+                description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth, permitiendo sincronizar y hacer seguimiento de tus mediciones desde tu smartphone."
+            },
+            ergonomico: {
+                title: "Ergonómico",
+                description: "Diseñado con materiales suaves y ajustables que garantizan comodidad para cualquier tamaño de brazo, facilitando mediciones precisas sin molestias."
+            },
+            preciso: {
+                title: "Preciso",
+                description: "Tecnología avanzada de medición que garantiza lecturas precisas y fiables en cada uso, cumpliendo con los estándares médicos internacionales."
+            }
+        };
+
+        // Open modal function
+        function openModal(type) {
+            const data = beneficiosData[type];
+
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+
+            modalDescription.textContent = data.description;
+
+            // Add class to start animation
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        // Close modal function
+        function closeModal() {
+            modalOverlay.classList.add('closing');
+
+            // Wait for animation to finish before hiding completely
+            setTimeout(() => {
+                modalOverlay.classList.remove('active', 'closing');
+                document.body.style.overflow = ''; // Restore scrolling
+            }, 300);
+        }
+
+        // Add click events to beneficios items
+        const beneficiosItems = document.querySelectorAll('.beneficios-text');
+        beneficiosItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const modalType = this.getAttribute('data-modal');
+                openModal(modalType);
+            });
+        });
+
+        // Close modal by clicking on close button
+        modalClose.addEventListener('click', closeModal);
+
+        // Close modal by clicking outside
+        modalOverlay.addEventListener('click', function (e) {
+            if (e.target === modalOverlay) {
+                closeModal();
+            }
+        });
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeModal();
+            }
+        });
     });
-
-
-    const beneficiosData = {
-    recargable: {
-        title: "Recargable",
-        image: "./img/icon-beneficios.svg",
-        description: "Batería de larga duración y recargable mediante conexión USB tipo C..."
-    },
-    compatible: {
-        title: "Compatible",
-        image: "./img/icon-beneficios.svg",
-        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
-    },
-    ergonomico: {
-        title: "Ergonomico",
-        image: "./img/icon-beneficios.svg",
-        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
-    },
-    preciso: {
-        title: "Preciso",
-        image: "./img/icon-beneficios.svg",
-        description: "Compatible con la mayoría de dispositivos móviles a través de Bluetooth..."
-    },
-    // otros beneficios
-};
-
-function openModal(type) {
-    const data = beneficiosData[type];
-
-    if (!data) return;
-
-    modalTitle.textContent = data.title;
-    modalImage.src = data.image;
-    modalDescription.textContent = data.description;
-
-    // Agregar clase para iniciar animación
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Evitar desplazamiento
-}
-function closeModal() {
-    modalOverlay.classList.add('closing');
-
-    // Esperar a que termine la animación antes de ocultar completamente
-    setTimeout(() => {
-        modalOverlay.classList.remove('active', 'closing');
-        document.body.style.overflow = ''; // Restaurar desplazamiento
-    }, 300);
-}
-
-
-
-// Agregar eventos de clic a elementos de beneficios
-const beneficiosItems = document.querySelectorAll('.beneficios-text');
-beneficiosItems.forEach(item => {
-    item.addEventListener('click', function() {
-        const modalType = this.getAttribute('data-modal');
-        openModal(modalType);
-    });
-});
-
-// Cerrar modal haciendo clic en el botón de cerrar
-modalClose.addEventListener('click', closeModal);
-
-// Cerrar modal haciendo clic fuera
-modalOverlay.addEventListener('click', function(e) {
-    if (e.target === modalOverlay) {
-        closeModal();
-    }
-});
-
-// Cerrar modal con tecla ESC
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && modalOverlay.classList.contains('active')) {
-        closeModal();
-    }
-});
-
 
 </script>
 
