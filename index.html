@@ -22,6 +22,12 @@
                     <div class="header-logo">
                         <img src="./img/montcare_logo.svg">
                     </div>
+                    <!-- Add burger menu button -->
+                    <div class="burger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
 
                     <nav class="header-nav">
                         <ol class="header-nav-list">
@@ -268,6 +274,44 @@
                 const sectionId = button.getAttribute("data-page");
                 document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
             });
+        });
+
+
+                // Add burger menu functionality
+                const burgerMenu = document.querySelector('.burger-menu');
+        const headerNav = document.querySelector('.header-nav');
+
+        burgerMenu.addEventListener('click', () => {
+            burgerMenu.classList.toggle('active');
+            headerNav.classList.toggle('active');
+
+            // Toggle body class to prevent scrolling
+            document.body.classList.toggle('menu-open');
+        });
+
+        // Close the menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('.header-nav-list li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                burgerMenu.classList.remove('active');
+                headerNav.classList.remove('active');
+
+                // Remove the body class to enable scrolling again
+                document.body.classList.remove('menu-open');
+            });
+        });
+
+        // Close the menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('.header-nav') && 
+                !event.target.closest('.burger-menu') && 
+                headerNav.classList.contains('active')) {
+                burgerMenu.classList.remove('active');
+                headerNav.classList.remove('active');
+
+                // Remove the body class to enable scrolling again
+                document.body.classList.remove('menu-open');
+            }
         });
 
         // Modal implementation for beneficios

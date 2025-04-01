@@ -78,6 +78,38 @@ body {
 
 }
 
+/* Mobile burger menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.burger-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #555555;
+    transition: all 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 /* Hero Styles */
 .hero {
     margin-bottom: 40px;
@@ -540,4 +572,132 @@ body {
 }
 .footer-redes{
     width: 30%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+    
+    .header-nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    .header-nav.active {
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        padding: 20px 0;
+    }
+    
+    body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .header-nav-list {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .header-nav-list > li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .header-nav-list > li > a {
+        display: block;
+        padding: 10px 0;
+    }
+    
+    /* Adjust header container padding for mobile */
+    .header-container {
+        padding: 0 20px;
+    }
+    
+    /* Hero section mobile adjustments */
+    .hero .hero-content {
+        width: 80%;
+        right: 10%;
+    }
+    
+    /* Access buttons adjustment */
+    .access .access-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .access-btn {
+        width: 90%;
+    }
+    
+    .access {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    #beneficios .beneficios-img {
+        height: 300px;
+    }
+    
+    /* Comunicate section mobile adjustments */
+    .comunicate .content {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .comunicate .content .comunicate-icon {
+        width: 25%;
+    }
+
+    .comunicate .content .comunicate-text {
+        width: 70%;
+    }
+
+    .comunicate .content .access-btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+    
+    /* Footer mobile adjustment */
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+
+    .footer .content {
+        flex-direction: column;
+    }
+    
+    .footer-nosotros, 
+    .footer-contactanos, 
+    .footer-redes {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    /* Características adjustment */
+    #caracteristicas .content {
+        grid-template-columns: 1fr;
+    }
 }
