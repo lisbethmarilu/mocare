@@ -263,7 +263,7 @@
                     document.querySelector(`.access-btn[data-page="${activeSection}"]`).classList.add("active");
                 }
             });
-        }, { threshold: 0.5 }); // Detecta cuando el 50% de la sección es visible
+        }, { threshold: 0.1 }); // Detecta cuando el 50% de la sección es visible
 
         // Observar cada sección
         sections.forEach(section => observer.observe(section));
