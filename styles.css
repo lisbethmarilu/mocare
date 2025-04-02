@@ -539,20 +539,22 @@ body {
 .comunicate .comunicate-icon img {
     height: 100px;
 }
-/* caracteristicas Styles */
+/* footer Styles */
 .footer{
     display: flex;
     align-items: center;
-    height: 300px;
     background: #F5F5F5;
 }
 .footer .content{
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ccc;
 }
 .footer-nosotros{
-    width: 35%;
+    width: 25%;
 }
 .footer-nosotros img{
     padding-bottom: 16px;
@@ -567,11 +569,37 @@ body {
     color: #555555;
     padding-bottom: 16px;
 }
+.footer-menu{
+    width: 25%;
+}
+.footer-nav-list>li>a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 16px;
+
+}
+.footer-nav-list>li {
+    padding-bottom: 10px;
+}
+.footer-nav-list{
+    list-style: none;
+}
 .footer-contactanos{
-    width: 35%;
+    width: 30%;
 }
 .footer-redes{
-    width: 30%;
+    width: 20%;
+}
+.footer-redes img{
+    width: 35px;
+    height: auto;
+    margin-right: 10px;
+}
+.footer .copyright{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #555555;
 }
 
 /* Responsive styles */
