@@ -13,6 +13,10 @@ body {
     padding: 0;
 
 }
+p{
+    color: #555555;
+    font-size: 16px;
+}
 
 .container {
     width: 100%;
@@ -24,12 +28,14 @@ body {
 /* Header Styles */
 
 .header {
+    position: sticky;
     height: 60px;
     top: 0;
-    left: 0;
     width: 100%;
+    background-color: white; /* Necesario para que la sombra se note */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    left: 0;
     z-index: 1100;
-    background: #fff;
 }
 
 .header-container {
@@ -117,8 +123,8 @@ body {
     margin-bottom: 40px;
 }
 
-.banner-principal img {
-    background-image: url('./img/banner.png');
+.banner-principal .img {
+    background-image: url('./img/banner-principal.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -133,8 +139,7 @@ body {
 
 .banner-principal .content {
     position: absolute;
-    right: 0;
-    width: 40%;
+    width: 33%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -147,8 +152,47 @@ body {
     font-size: 42px;
     line-height: 48px;
     padding-bottom: 16px;
-    color: #EF7D00;
+    color: #555555;
 }
+
+/* concept-principal style  */
+
+.concept-principal{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.concept-principal .content{
+    display: flex;
+    justify-content: center;
+}
+.concept-principal .text{
+    width: 70%;
+    text-align: center;
+}
+
+/* nosotros-principal style  */
+
+.nosotros-principal .content{
+    display: flex;
+    height: 400px;
+    gap: 20px;
+    overflow: hidden;
+}
+.nosotros-principal .parte{
+    width: 50%;
+    background-color: #F5F5F5;
+    border-radius: 0 20px 20px 0;
+}
+.nosotros-principal .parte-img{
+    width: 50%;
+}
+.nosotros-principal .parte-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 0 0 20px;
+}
+
 
 
 
@@ -198,11 +242,6 @@ body {
     line-height: 48px;
     padding-bottom: 16px;
     color: #EF7D00;
-}
-
-.hero .hero-text p {
-    font-size: 16px;
-    color: #555555;
 }
 
 /* access Styles */
