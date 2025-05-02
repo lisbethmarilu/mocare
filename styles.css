@@ -285,11 +285,9 @@ body {
 #productos-principal h3{
     font-size: 18px;
     font-weight: 600;
-    color: #555555;
 }
 #productos-principal p{
     font-size: 16px;
-    color: #555555;
 }
 #productos-principal .card:hover {
     box-shadow: 0 0 12px rgba(145, 145, 145, 0.705);
@@ -302,8 +300,9 @@ body {
     background-color: #F5F5F5;
     border-radius: 20px;
     overflow: hidden;
-    padding: 16px;
+    padding: 24px 16px 0;
     text-decoration: none;
+    color: #555555;
 
 }
 #productos-principal .text-icon{
@@ -701,7 +700,7 @@ body {
 
 /* caracteristicas Styles */
 #caracteristicas {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 #caracteristicas h2 {
@@ -726,6 +725,13 @@ body {
     display: flex;
     padding: 16px;
     align-items: center;
+}
+
+#caracteristicas .caracteristicas-img{
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    height: 470px;
 }
 
 #caracteristicas .card {
@@ -980,6 +986,15 @@ body {
         height: 300px;
     }
     
+    /* Como funciona section mobile adjustments */
+    #como-funciona{
+        height: 600px;
+    }
+    #como-funciona h2{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
     /* Comunicate section mobile adjustments */
     .comunicate .content {
         flex-wrap: wrap;
@@ -1021,5 +1036,19 @@ body {
     /* Características adjustment */
     #caracteristicas .content {
         grid-template-columns: 1fr;
+    }
+
+}
+@media screen and (max-width: 570px){
+    #caracteristicas .card{
+        height: 400px;
+    }
+    #caracteristicas .caracteristicas-img{
+        width: auto;
+        height: 340px;
+    }
+    #caracteristicas h2{
+        padding-top: 24px;
+        padding-bottom: 24px;
     }
 }
