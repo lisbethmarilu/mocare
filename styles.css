@@ -13,10 +13,6 @@ body {
     padding: 0;
 
 }
-p{
-    color: #555555;
-    font-size: 16px;
-}
 
 .container {
     width: 100%;
@@ -36,6 +32,9 @@ p{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     left: 0;
     z-index: 1100;
+}
+.principal{
+    position: fixed;
 }
 
 .header-container {
@@ -119,6 +118,8 @@ p{
 
 /*PRINCIPAL*/---------------------
 
+
+
 .banner-principal {
     margin-bottom: 40px;
 }
@@ -158,8 +159,7 @@ p{
 /* concept-principal style  */
 
 .concept-principal{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
 }
 .concept-principal .content{
     display: flex;
@@ -169,6 +169,10 @@ p{
     width: 70%;
     text-align: center;
 }
+.concept-principal p{
+    font-size: 16px;
+    color: #555555;
+}
 
 /* nosotros-principal style  */
 
@@ -177,12 +181,34 @@ p{
     height: 400px;
     gap: 20px;
     overflow: hidden;
+    margin: 80px 0;
 }
 .nosotros-principal .parte{
     width: 50%;
     background-color: #F5F5F5;
     border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: #555555;
 }
+.nosotros-principal .text{
+    max-width: 600px;
+    padding-right: 40px;
+}
+.nosotros-principal h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+}
+.nosotros-principal p{
+    font-size: 16px;
+    color: #555555;
+    padding-bottom: 24px;
+    padding-top: 12px;
+}
+
 .nosotros-principal .parte-img{
     width: 50%;
 }
@@ -191,6 +217,189 @@ p{
     height: 100%;
     object-fit: cover;
     border-radius: 20px 0 0 20px;
+}
+
+
+/*#beneficios-principal style */
+
+#beneficios-principal{
+    background-image: url(./img/fondo-beneficios-principal.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    background-color: #eef7ff;
+}
+#beneficios-principal .container{
+    max-width: 1000px;
+    
+}
+#beneficios-principal .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding: 80px 0px;
+}
+#beneficios-principal .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+}
+#beneficios-principal .text{
+    color: #555555;
+}
+#beneficios-principal h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #555555;
+    text-align: center;
+}
+#beneficios-principal h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+}
+#beneficios-principal p{
+    font-size: 16px;
+    color: #555555;
+}
+
+/*#productos-principal style */
+
+#productos-principal .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 24px;
+    padding: 80px 0px;
+}
+#productos-principal h3{
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+}
+#productos-principal p{
+    font-size: 16px;
+    color: #555555;
+}
+#productos-principal .card:hover {
+    box-shadow: 0 0 12px rgba(145, 145, 145, 0.705);
+    transition: 0.3s;
+}
+#productos-principal .card{
+    background-image: url(./img/fondo-productos-principal.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-color: #F5F5F5;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 16px;
+    text-decoration: none;
+
+}
+#productos-principal .text-icon{
+    display: flex;
+}
+#productos-principal .text{
+    padding: 16px 0;
+}
+#productos-principal h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+
+    text-align: center;
+    padding-top: 80px;
+}
+#productos-principal .img{
+    display: flex;
+    justify-content: center;
+}
+
+/*#certificaciones-principal style */
+
+#certificaciones-principal{
+    background-color: #f5f5f5;
+}
+
+#certificaciones-principal .content{
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    padding: 80px 0;
+}
+#certificaciones-principal h2 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #555555;
+    text-align: center;
+    padding: 80px 0px 18px;
+}
+#certificaciones-principal p{
+    text-align: center;
+}
+
+
+/*#comunicate-principal style */
+#comunicate-principal {
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+#comunicate-principal .container {
+    width: 100%;
+
+}
+
+#comunicate-principal .content {
+    display: flex;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    border-radius: 20px;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#comunicate-principal .content:hover {
+    box-shadow: 0 0 10px rgba(145, 145, 145, 0.705);
+}
+
+#comunicate-principal .fondo-img {
+    background-image: url('./img/fondo-comunicate.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#comunicate-principal .text h2 {
+    font-family: "Gabarito";
+    font-weight: 600;
+    font-size: 28px;
+    color: #555555;
+    padding-bottom: 10px;
+}
+
+#comunicate-principal .text p {
+    font-size: 16px;
+    color: #555555;
+}
+
+#comunicate-principal .icon img {
+    height: 100px;
 }
 
 
