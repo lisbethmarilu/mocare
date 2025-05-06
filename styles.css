@@ -28,12 +28,14 @@ body {
     height: 60px;
     top: 0;
     width: 100%;
-    background-color: white; /* Necesario para que la sombra se note */
+    background-color: white;
+    /* Necesario para que la sombra se note */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     left: 0;
     z-index: 1100;
 }
-.principal{
+
+.principal {
     position: fixed;
 }
 
@@ -116,11 +118,8 @@ body {
 
 
 
-/*PRINCIPAL*/---------------------
-
-
-
-.banner-principal {
+/*PRINCIPAL*/
+--------------------- .banner-principal {
     margin-bottom: 40px;
 }
 
@@ -158,32 +157,36 @@ body {
 
 /* concept-principal style  */
 
-.concept-principal{
+.concept-principal {
     padding-top: 80px;
 }
-.concept-principal .content{
+
+.concept-principal .content {
     display: flex;
     justify-content: center;
 }
-.concept-principal .text{
+
+.concept-principal .text {
     width: 70%;
     text-align: center;
 }
-.concept-principal p{
+
+.concept-principal p {
     font-size: 16px;
     color: #555555;
 }
 
 /* nosotros-principal style  */
 
-.nosotros-principal .content{
+.nosotros-principal .content {
     display: flex;
     height: 400px;
     gap: 20px;
     overflow: hidden;
     margin: 80px 0;
 }
-.nosotros-principal .parte{
+
+.nosotros-principal .parte {
     width: 50%;
     background-color: #F5F5F5;
     border-radius: 0 20px 20px 0;
@@ -193,26 +196,30 @@ body {
     align-items: flex-end;
     color: #555555;
 }
-.nosotros-principal .text{
+
+.nosotros-principal .text {
     max-width: 600px;
     padding-right: 40px;
 }
-.nosotros-principal h3{
+
+.nosotros-principal h3 {
     font-size: 18px;
     font-weight: 600;
     color: #555555;
 }
-.nosotros-principal p{
+
+.nosotros-principal p {
     font-size: 16px;
     color: #555555;
     padding-bottom: 24px;
     padding-top: 12px;
 }
 
-.nosotros-principal .parte-img{
+.nosotros-principal .parte-img {
     width: 50%;
 }
-.nosotros-principal .parte-img img{
+
+.nosotros-principal .parte-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -222,7 +229,7 @@ body {
 
 /*#beneficios-principal style */
 
-#beneficios-principal{
+#beneficios-principal {
     background-image: url(./img/fondo-beneficios-principal.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -231,18 +238,21 @@ body {
     align-items: center;
     background-color: #eef7ff;
 }
-#beneficios-principal .container{
+
+#beneficios-principal .container {
     max-width: 1000px;
-    
+
 }
-#beneficios-principal .content{
+
+#beneficios-principal .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
     row-gap: 24px;
     padding: 80px 0px;
 }
-#beneficios-principal .card{
+
+#beneficios-principal .card {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -251,9 +261,11 @@ body {
     border-radius: 12px;
     padding: 8px;
 }
-#beneficios-principal .text{
+
+#beneficios-principal .text {
     color: #555555;
 }
+
 #beneficios-principal h2 {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -263,37 +275,43 @@ body {
     text-align: center;
     padding-top: 80px;
 }
-#beneficios-principal h3{
+
+#beneficios-principal h3 {
     font-size: 18px;
     font-weight: 600;
     color: #555555;
 }
-#beneficios-principal p{
+
+#beneficios-principal p {
     font-size: 16px;
     color: #555555;
 }
 
 /*#productos-principal style */
 
-#productos-principal .content{
+#productos-principal .content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 24px;
     row-gap: 24px;
     padding: 80px 0px;
 }
-#productos-principal h3{
+
+#productos-principal h3 {
     font-size: 18px;
     font-weight: 600;
 }
-#productos-principal p{
+
+#productos-principal p {
     font-size: 16px;
 }
+
 #productos-principal .card:hover {
     box-shadow: 0 0 12px rgba(145, 145, 145, 0.705);
     transition: 0.3s;
 }
-#productos-principal .card{
+
+#productos-principal .card {
     background-image: url(./img/fondo-productos-principal.png);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -305,12 +323,15 @@ body {
     color: #555555;
 
 }
-#productos-principal .text-icon{
+
+#productos-principal .text-icon {
     display: flex;
 }
-#productos-principal .text{
+
+#productos-principal .text {
     padding: 16px 0;
 }
+
 #productos-principal h2 {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -320,24 +341,26 @@ body {
     text-align: center;
     padding-top: 80px;
 }
-#productos-principal .img{
+
+#productos-principal .img {
     display: flex;
     justify-content: center;
 }
 
 /*#certificaciones-principal style */
 
-#certificaciones-principal{
+#certificaciones-principal {
     background-color: #f5f5f5;
 }
 
-#certificaciones-principal .content{
+#certificaciones-principal .content {
     display: flex;
     gap: 24px;
     justify-content: center;
     padding: 80px 0;
     flex-wrap: wrap;
 }
+
 #certificaciones-principal h2 {
     text-transform: uppercase;
     font-family: "Montserrat", sans-serif;
@@ -347,7 +370,8 @@ body {
     text-align: center;
     padding: 80px 0px 18px;
 }
-#certificaciones-principal p{
+
+#certificaciones-principal p {
     text-align: center;
 }
 
@@ -406,8 +430,8 @@ body {
 
 
 
-/*TENSIOMETRO*/---------------------
-
+/*TENSIOMETRO*/
+---------------------
 
 /* Hero Styles */
 .hero {
@@ -599,6 +623,7 @@ body {
         opacity: 0;
     }
 }
+
 /*- modal popup beneficios-*/
 .modal-overlay {
     position: fixed;
@@ -609,6 +634,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     /* estilos adicionales */
 }
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -728,7 +754,7 @@ body {
     align-items: center;
 }
 
-#caracteristicas .caracteristicas-img{
+#caracteristicas .caracteristicas-img {
     display: flex;
     justify-content: flex-start;
     width: auto;
@@ -840,13 +866,15 @@ body {
 .comunicate .comunicate-icon img {
     height: 100px;
 }
+
 /* footer Styles */
-.footer{
+.footer {
     display: flex;
     align-items: center;
     background: #F5F5F5;
 }
-.footer .content{
+
+.footer .content {
     display: flex;
     justify-content: space-between;
     gap: 24px;
@@ -854,49 +882,61 @@ body {
     padding-bottom: 40px;
     border-bottom: 1px solid #ccc;
 }
-.footer-nosotros{
+
+.footer-nosotros {
     width: 25%;
 }
-.footer-nosotros img{
+
+.footer-nosotros img {
     padding-bottom: 16px;
     width: 200px;
 }
-.footer p{
+
+.footer p {
     font-size: 16px;
     color: #555555;
 }
-.footer h3{
+
+.footer h3 {
     font-size: 18px;
     color: #555555;
     padding-bottom: 16px;
 }
-.footer-menu{
+
+.footer-menu {
     width: 25%;
 }
+
 .footer-nav-list>li>a {
     color: #555555;
     text-decoration: none;
     font-size: 16px;
 
 }
+
 .footer-nav-list>li {
     padding-bottom: 10px;
 }
-.footer-nav-list{
+
+.footer-nav-list {
     list-style: none;
 }
-.footer-contactanos{
+
+.footer-contactanos {
     width: 30%;
 }
-.footer-redes{
+
+.footer-redes {
     width: 20%;
 }
-.footer-redes img{
+
+.footer-redes img {
     width: 35px;
     height: auto;
     margin-right: 10px;
 }
-.footer .copyright{
+
+.footer .copyright {
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -908,31 +948,42 @@ body {
     .burger-menu {
         display: flex;
     }
+
     /* PRINCIPAL */
+    .banner-principal .img {
+        background-image: url('./img/banner-principal\ max530.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 600px;
+    }
 
     .banner-principal .content {
         width: 80%;
         align-items: flex-start;
         padding-top: 100px;
     }
+
     .banner-principal .text h1 {
         font-size: 32px;
         line-height: 36px;
     }
+
     .banner-principal .container {
         position: relative;
         height: 600px;
         width: 100%;
     }
-    .banner-principal .img {
-        height: 600px;
-    }
-    .concept-principal .content{
+
+
+    .concept-principal .content {
         padding-top: 80px;
     }
+
     .concept-principal .text {
         width: 90%;
     }
+
     .nosotros-principal .content {
         display: flex;
         height: 600px;
@@ -941,6 +992,7 @@ body {
         gap: 0;
         flex-direction: column;
     }
+
     .nosotros-principal .parte {
         width: 100%;
         border-radius: 0;
@@ -948,30 +1000,36 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
     .nosotros-principal .text {
         max-width: 600px;
         padding: 40px 20px 20px 20px;
     }
+
     .nosotros-principal .parte-img {
         width: 100%;
     }
+
     .nosotros-principal .parte-img img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 0;
     }
+
     #beneficios-principal .content {
         padding: 80px 20px;
         row-gap: 20px;
         column-gap: 20px;
     }
+
     #beneficios-principal .card {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 16px;
     }
+
     #productos-principal .content {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -979,16 +1037,29 @@ body {
         row-gap: 20px;
         padding: 80px 0px;
     }
+
     #certificaciones-principal .content {
         display: flex;
         gap: 24px;
         justify-content: center;
         padding: 80px 0;
     }
-    .comunicate .content {
+    #comunicate-principal .content {
         flex-wrap: wrap;
         height: auto;
         padding: 30px 20px;
+    }
+    #comunicate-principal .icon {
+        width: 25%;
+    }
+
+    #comunicate-principal .text {
+        width: 70%;
+    }
+
+    #comunicate-principal .access-btn {
+        width: 100%;
+        margin-top: 20px;
     }
 
 
@@ -1003,62 +1074,62 @@ body {
         height: 0;
         overflow: hidden;
         transition: height 0.3s ease;
-        box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
     }
-    
+
     .header-nav.active {
         height: calc(100vh - 60px);
         overflow-y: auto;
         padding: 20px 0;
     }
-    
+
     body.menu-open {
         overflow: hidden;
         position: fixed;
         width: 100%;
         height: 100%;
     }
-    
+
     .header-nav-list {
         flex-direction: column;
         align-items: center;
         width: 100%;
         gap: 20px;
     }
-    
-    .header-nav-list > li {
+
+    .header-nav-list>li {
         width: 100%;
         text-align: center;
     }
-    
-    .header-nav-list > li > a {
+
+    .header-nav-list>li>a {
         display: block;
         padding: 10px 0;
     }
-    
+
     /* Adjust header container padding for mobile */
     .header-container {
         padding: 0 20px;
     }
-    
+
     /* Hero section mobile adjustments */
     .hero .hero-content {
         width: 80%;
         right: 10%;
     }
-    
+
     /* Access buttons adjustment */
     .access .access-wrapper {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
-    
+
     .access-btn {
         width: 90%;
     }
-    
+
     .access {
         height: auto;
         padding: 20px 0;
@@ -1071,12 +1142,13 @@ body {
     #beneficios .beneficios-img {
         height: 300px;
     }
-    
+
     /* Como funciona section mobile adjustments */
-    #como-funciona{
+    #como-funciona {
         height: 600px;
     }
-    #como-funciona h2{
+
+    #como-funciona h2 {
         padding-top: 80px;
         padding-bottom: 24px;
     }
@@ -1100,64 +1172,78 @@ body {
         width: 100%;
         margin-top: 20px;
     }
-    
+
     /* Footer mobile adjustment */
     .footer {
         padding-left: 20px;
         padding-right: 20px;
-        
+
     }
 
     .footer .content {
         flex-direction: column;
     }
-    
-    .footer-nosotros, 
-    .footer-contactanos, 
+
+    .footer-nosotros,
+    .footer-contactanos,
     .footer-redes {
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     /* Características adjustment */
     #caracteristicas .content {
         grid-template-columns: 1fr;
     }
 
 }
-@media screen and (max-width: 530px){
 
-     /* PRINCIPAL */
+@media screen and (max-width: 530px) {
 
+    /* PRINCIPAL */
+    .banner-principal .img {
+        height: 600px;
+    }
 
+    #productos-principal .content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 
+    #productos-principal .img {
+        width: auto;
+        height: 280px;
+    }
 
     /* TENSIOMETRO */
 
-    #caracteristicas .card{
+    #caracteristicas .card {
         height: 400px;
     }
-    #caracteristicas .caracteristicas-img{
+
+    #caracteristicas .caracteristicas-img {
         width: auto;
         height: 340px;
     }
-    #caracteristicas h2{
+
+    #caracteristicas h2 {
         padding-top: 24px;
         padding-bottom: 23px;
     }
-    
+
     #beneficios .beneficios-text p {
         text-transform: uppercase;
         font-size: 18px;
         font-weight: 600;
         color: #555555;
     }
-    
+
     #beneficios .beneficios-content {
         display: flex;
         justify-content: space-between;
         height: 400px;
     }
+
     #beneficios .beneficios-img {
         margin: 80px 0 80px;
     }
